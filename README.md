@@ -20,7 +20,7 @@ In this lab you will  be connecting your Git repository with the Plants by WebSp
 
 1.4  Click the **Clone or download** button from your copy of the forked repo and copy the HTTPS URL to your clipboard
 
-    ![Clone URL](images/ss00.png)
+   ![Clone URL](images/ss00.png)
 
 1.5  From the client terminal window clone the Git repo  with  the following commands  appending the HTTPS URL from your clipboard
 
