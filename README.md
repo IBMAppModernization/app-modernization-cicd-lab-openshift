@@ -105,11 +105,11 @@ The BuildConfig for your pipeline is  already configured to be triggered by a Gi
 
 5.4  Click on the repository settings
 
-    ![Settings](images/ss11.png)
+   ![Settings](images/ss11.png)
 
 5.5 Under **Options** select **Webhooks** and click **Add webhook**
 
-    ![Add webhook](images/ss12.png)
+   ![Add webhook](images/ss12.png)
 
 5.6  For the Payload URL paste in the URL you copied to your clipboard in step 5.2
 
@@ -125,9 +125,9 @@ Change content type to **application/json**
 
 5.10  Change  `$30.00 each` to `<strike>$30.00</strike> $25.00 each`
 
-    This will show the price of the Bonsai Tree as being reduced even more
+   This will show the price of the Bonsai Tree as being reduced even more
 
-    ![Reduce Bonsai price](images/ss14.png)
+   ![Reduce Bonsai price](images/ss14.png)
 
 5.11 At the bottom of the UI window add a commit message and click on **Commit changes**
 
