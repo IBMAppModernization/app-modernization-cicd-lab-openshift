@@ -14,7 +14,7 @@ In this lab you will  be connecting your Git repository with the Plants by WebSp
 
 1.2  In the search bar at the top left type in `app-modernization-plants-by-websphere-jee6`
 
-    ![Search results](images/ss0.png)
+   ![Search results](images/ss0.png)
 
 1.3  Select the repository `IBMAppModernization\app-modernization-plants-by-websphere-jee6` and then click on the **Fork** icon
 
