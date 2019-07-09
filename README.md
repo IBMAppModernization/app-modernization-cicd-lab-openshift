@@ -117,7 +117,7 @@ Change content type to **application/json**
 
 5.7  Accept the other defaults and click **Add webhook**
 
-    ![Add webhook](images/ss13.png)
+   ![Add webhook](images/ss13.png)
 
 5.8  In the Github file browser drill down to *pbw-web/src/main/webapp/promo.xhtml*
 
