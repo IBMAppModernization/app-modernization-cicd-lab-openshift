@@ -62,7 +62,7 @@ Complete the lab exercise *S2I and Template  Lab for the App Modernization Dojo 
 
 2.7 Change the **Source URL** to the url of your clone of the Plants by WebSphere repo
 
-   ![Source URL](images/ss3.png)
+   ![Source URL](images/ss3-1.png)
 
 2.8 Scroll down and select **Create**.
 
