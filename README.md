@@ -16,25 +16,27 @@ Complete the lab exercise *S2I and Template  Lab for the App Modernization Dojo 
 
 ### Step 1: Install Jenkins in your OpenShift cluster
 
-1.1 Open the OpenShift web console in your browser
+1.1 Open the OpenShift web console in your browser and mke sure you're in the **pbw-liberty-mariadb** project.
 
-1.2 Make sure you're in the **pbw-liberty-mariadb** project (top left) and click on **Add to Project -> Browse Catalog** (top right)
+   ![Select project](images/ss8-1.png)
 
-   ![Select project](images/ss8.png)
+1.2 Select `+Add` in the left pane.
 
-1.3 Select the **CI/CD** category and click on **Jenkins (Ephemeral)**
+1.3 Select **From Catalog** tile in the window on the right.
 
-   ![Jenkins](images/ss1.png)
+1.4 Select the **CI/CD** category and then select on **Jenkins (Ephemeral)**
 
-1.4 Click **Next**, then click **Next** again
+   ![Jenkins](images/ss1-1.png)
 
-1.5 Click **Create** then click **Continue to the project overview**
+1.5 Select `Instantiate Template`.
 
-1.6 Wait for the pods for Jenkins shows as running (note this may take a few minutes)
+1.6 Accept all default click **Create**.
 
-   ![Running](images/ss2.png)
+1.7 Wait until the status of the Jenkins instance becomes `Ready` (note this may take a few minutes).
 
-1.7 From a terminal run the following command to give Jenkins Service Account push access to the internal container registry
+   ![Running](images/ss2-1.png)
+
+1.8 In the terminal window, run the following command to give Jenkins Service Account push access to the internal container registry
 
    ```bash
    oc policy add-role-to-user system:image-builder system:serviceaccount:pbw-liberty-mariadb:jenkins
@@ -44,17 +46,26 @@ Complete the lab exercise *S2I and Template  Lab for the App Modernization Dojo 
 2.1  From the terminal run the following command to install the Plants by WebSphere pipeline template (note: you need to be in the top level folder of the cloned  Plants by WebSphereGitHub repo)
 
    ```bash
-   oc create -f openshift/templates/pbw-liberty-cicd-pipeline.yaml
+   oc create -f openshift/templates/cicd/pbw-liberty-cicd-pipeline.yaml
    ```
-2.2 In your Web console browser tab make sure you're in the **pbw-liberty-mariadb** project (top left) and click on **Add to Project -> Browse Catalog** (top right)
+2.2 In your Web console browser tab make sure you're in the **pbw-liberty-mariadb** project.
 
-2.3 Select the **Other** category and then click **Plants by WebSphere on Liberty CI/CD Pipeline**
+2.3 Select `+Add` in the left pane.
 
-2.4 Click **Next**. Change the **Source URL** to the url of your clone of the Plants by WebSphere repo
+2.4 Select **From Catalog** tile in the window on the right.
+
+2.5 Select the **Other** category and then click **Plants by WebSphere on Liberty CI/CD Pipeline** tile.
+
+   ![Running](images/ss2-2.png)
+
+2.6 Select `Instantiate Template`.
+
+2.7 Change the **Source URL** to the url of your clone of the Plants by WebSphere repo
 
    ![Source URL](images/ss3.png)
 
-2.5 Click **Create** and then click **Continue to the project overview**
+2.8 Scroll down and select **Create**.
+
 
 ### Step 5: Manually trigger a build to test pipeline
 
