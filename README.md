@@ -67,79 +67,97 @@ Complete the lab exercise *S2I and Template  Lab for the App Modernization Dojo 
 2.8 Scroll down and select **Create**.
 
 
-### Step 5: Manually trigger a build to test pipeline
+### Step 3: Manually trigger a build to test pipeline
 
-5.1 In your Web console browser tab select **Build -> Pipelines**
+3.1 In your OpenShift Web console, switch to `Administrator` view.
 
-  ![Pipelines](images/ss4.png)
+   ![Source URL](images/ss3-2.png)
 
-5.2 Click on **Start Pipeline**
+3.2 Select **Builds -> Build Configs** in the left pane.
 
-  ![Start Pipeline](images/ss5.png)
+  ![Pipelines](images/ss4-1.png)
 
-5.3 Once the Pipeline starts click on **View Log**. This will take you into Jenkins and display the Jenkins log for the pipeline. (Note: you may be prompted to use your OpenShift credentials for Jenkins)
+3.3 Select `pbw-cicd-pipeline` to open the pipeline.
 
-   ![View Log](images/ss6.png)
+3.4 Select `Start Build` froom the `Actions` menu.
 
-5.4 Verify that the pipeline runs without errors. You should see output like the following:
+3.5 Once the Pipeline starts, navigate to `Logs` tab and click on **View Log**. This will take you into Jenkins and display the Jenkins log for the pipeline. (Note: you may be prompted to use your OpenShift credentials for Jenkins)
+
+3.6 Verify that the pipeline runs without errors. You should see the following output when the pipeline execution comopletes:
 
    ![Pipeline log](images/ss7.png)
 
-### Step 6: Trigger a build via a commit to Github
+3.7 On the `Overview` tab of `Build Detail` in the OpenShift console, you should see `Complete` status.
+
+   ![Pipeline log](images/ss7-1.png)
+
+### Step 4: Trigger a build via a commit to Github
 
 The BuildConfig for your pipeline is  already configured to be triggered by a Github webhook
 
-6.1 In your Web console browser tab select the **pbw-cicd-pipeline**
+4.1 In your Web console, select **Builds -> Build Configs** in the left pane.
 
-  ![Select pipeline](images/ss9.png)
+  ![Pipelines](images/ss4-1.png)
 
-6.2 Click on the **Configuration** tab and then click on the icon next to the **GitHub Webhook URL** to copy it to the clipboard
+4.2 Select `pbw-cicd-pipeline` to open the pipeline.
+
+4.3 Scroll down to the **Webhooks** section.
+
+4.4 Copy the `Github Webhook URL` to the clipboard
 
   ![Copy webhook](images/ss10.png)
 
-6.3 In another browser tab go to https://github.com and select your cloned Plants by WebSphere repository
+4.5 In another browser tab go to https://github.com and open your cloned `Plants by WebSphere` repository
 
-6.4  Click on the repository settings
+4.6  Navgate to the repository `Settings` tab
 
    ![Settings](images/ss11.png)
 
-6.5 Under **Options** select **Webhooks** and click **Add webhook**
+4.7 Navigate to the **Webhooks** subtab.
+
+4.8 Click **Add webhook**
 
    ![Add webhook](images/ss12.png)
 
-6.6  For the Payload URL paste in the URL you copied to your clipboard in step 5.2
+4.9  For the Payload URL, paste in the URL you copied to your clipboard in the previous step.
 
-Change content type to **application/json**
+4.10 Change content type to **application/json**.
 
-6.7  Accept the other defaults and click **Add webhook**
+4.11 Accept the other defaults and click **Add webhook**
 
    ![Add webhook](images/ss13.png)
 
-6.8  In the Github file browser drill down to *pbw-web/src/main/webapp/promo.xhtml*
+4.12 In the Github repo, drill down to *pbw-web/src/main/webapp/promo.xhtml*.
 
-6.9  Click on the pencil icon to edit **promo.xhtml**  and on line 95 locate the price of the Bonsai Tree
+4.13 Click on the `pencil` icon to edit the file **promo.xhtml**.
 
-6.10  Change  `$30.00 each` to `<strike>$30.00</strike> $25.00 each`
+4.14 At line 95, locate the price of the Bonsai Tree.
+
+4.15 Change `$30.00 each` to `<strike>$30.00</strike> $25.00 each`
 
    This will show the price of the Bonsai Tree as being reduced even more
 
    ![Reduce Bonsai price](images/ss14.png)
 
-6.11 At the bottom of the UI window add a commit message and click on **Commit changes**
+4.16 At the bottom of the UI window add a commit message and click on **Commit changes**
 
-6.12 Switch back to your OpenShift console and open the **pbw-cicd-pipeline**
+4.17 Switch back to your OpenShift console and select **Builds -> Builds** in the left pane.
 
-6.13 Verify that your pipeline  starts building.
+4.18 Verify that your pipeline is running.
 
-   ![new build](images/ss15.png)
+   ![new build](images/ss15-1.png)
 
-6.14 Once the pipeline has completed select **Applications -> Routes** from  the left navigation menu
+4.19 Once the pipeline has completed, select **Networking -> Routes** in the left navigation pane.
 
-   ![Routes](images/ss16.png)
+4.20 Select `pbw-liberty-mariadb`.
 
-6.15 Click on the hostname link for **pbw-liberty-mariadb** to launch the Plants by WebSphere app
+4.21 The applicatioon route is available on this window.
 
-6.16 Verify that the price of the bonzai tree has changed.
+   ![Routes](images/ss16-1.png)
+
+4.22 Click on the `Location` link of **pbw-liberty-mariadb** to launch the Plants by WebSphere app.
+
+4.23 Verify that the price of the bonzai tree has changed.
 
   ![Price reduced](images/ss17.png)
 
