@@ -83,7 +83,7 @@ Complete the lab exercise *S2I and Template  Lab for the App Modernization Dojo 
 
 3.5 Once the Pipeline starts, navigate to `Logs` tab and click on **View Log**. This will take you into Jenkins console and display the Jenkins log for the pipeline. (Note: you may be prompted to use your OpenShift credentials for Jenkins)
 
-3.6 Verify that the pipeline runs without errors. In Jenkins console, you should see the following output when the pipeline execution completes:
+3.6 Verify that the pipeline runs without errors. In Jenkins console, you should see the following log entries when the pipeline execution completes:
 
    ![Pipeline log](images/ss7.png)
 
