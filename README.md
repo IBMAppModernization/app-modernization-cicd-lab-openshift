@@ -105,7 +105,7 @@ The BuildConfig for your pipeline is  already configured to be triggered by a Gi
 
 4.4 Copy the `Github Webhook URL` to the clipboard
 
-  ![Copy webhook](images/ss10.png)
+  ![Copy webhook](images/ss10-1.png)
 
 4.5 In another browser tab go to https://github.com and open your cloned `Plants by WebSphere` repository
 
