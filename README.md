@@ -151,7 +151,7 @@ The BuildConfig for your pipeline is  already configured to be triggered by a Gi
 
 4.20 Select `pbw-liberty-mariadb`.
 
-4.21 The applicatioon route is available on this window.
+4.21 The application route is available on this window.
 
    ![Routes](images/ss16-1.png)
 
