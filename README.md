@@ -79,15 +79,15 @@ Complete the lab exercise *S2I and Template  Lab for the App Modernization Dojo 
 
 3.3 Select `pbw-cicd-pipeline` to open the pipeline.
 
-3.4 Select `Start Build` froom the `Actions` menu.
+3.4 Select `Start Build` from the `Actions` menu.
 
-3.5 Once the Pipeline starts, navigate to `Logs` tab and click on **View Log**. This will take you into Jenkins and display the Jenkins log for the pipeline. (Note: you may be prompted to use your OpenShift credentials for Jenkins)
+3.5 Once the Pipeline starts, navigate to `Logs` tab and click on **View Log**. This will take you into Jenkins console and display the Jenkins log for the pipeline. (Note: you may be prompted to use your OpenShift credentials for Jenkins)
 
-3.6 Verify that the pipeline runs without errors. You should see the following output when the pipeline execution comopletes:
+3.6 Verify that the pipeline runs without errors. In Jenkins console, you should see the following output when the pipeline execution completes:
 
    ![Pipeline log](images/ss7.png)
 
-3.7 On the `Overview` tab of `Build Detail` in the OpenShift console, you should see `Complete` status.
+3.7 In the OpenShift console, you should see `Complete` status on the `Overview` tab of `Build Detail`.
 
    ![Pipeline log](images/ss7-1.png)
 
